@@ -2,10 +2,8 @@ FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
 
+# کپی فایل با مجوز اجرا (روش مطمئن‌تر)
 COPY --chmod=755 tunnix /usr/local/bin/tunnix
-
-# این خط مجوز اجرا را به فایل tunnix می‌دهد
-RUN chmod +x /usr/local/bin/tunnix
 
 ENV PORT=8080
 
