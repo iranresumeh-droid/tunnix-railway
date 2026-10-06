@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/
 
 COPY tunnix /usr/local/bin/tunnix
 
-# خط اضافه شده برای رفع مشکل مجوز
+# این خط مجوز اجرا را به فایل tunnix می‌دهد
 RUN chmod +x /usr/local/bin/tunnix
 
 ENV PORT=8080
